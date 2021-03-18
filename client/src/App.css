@@ -7,7 +7,7 @@
 }
 
 .done{
-  background: rgb(69, 226, 69);
+  text-decoration: line-through;
 }
 .deleting{
   background: rgb(235, 122, 73);
