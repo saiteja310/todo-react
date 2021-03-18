@@ -59,15 +59,19 @@ class EditTodoRow extends Component {
         return (
             <Table.Row>
                 <Table.Cell>
-                    <Input style={{ width: '100%' }} placeholder='Title' value={this.state.title} onChange={this.changeNewTitle} />
+                    <Input style={{ width: '100%' }} title="Title" placeholder='Title' value={this.state.title} onChange={this.changeNewTitle} />
                 </Table.Cell>
 
                 <Table.Cell>
-                    <Input style={{ width: '100%' }} placeholder='Description' value={this.state.description} onChange={this.changeNewDescription} />
+                    <Input style={{ width: '100%' }} title="Description" placeholder='Description' value={this.state.description} onChange={this.changeNewDescription} />
                 </Table.Cell>
 
                 <Table.Cell>
-                    <Dropdown value={this.state.bucket} allowAdditions search fluid selection onChange={this.changeNewBucket} options={this.state.buckets} onAddItem={this.handleAddition}/>
+                    <Dropdown value={this.state.bucket} title="Bucket" allowAdditions search fluid selection 
+                        onChange={this.changeNewBucket} 
+                        options={this.state.buckets} 
+                        onAddItem={this.handleAddition}
+                    />
                 </Table.Cell>
 
                 <AddEditOptions todo={this.props.todo}
